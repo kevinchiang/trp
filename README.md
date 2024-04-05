@@ -40,13 +40,14 @@ keys.
 The included Dockerfile includes everything needed to build this project. 
 
 TODO:
-1.  Set up Github Actions to build automatically on pull request to master or push to master.
+1.  Set up Github Actions to build automatically run `docker build` on pull request to master or push to master.
 2.  Create another Dockerfile for development that includes linting and running tests.
 
 ## Improvements
 
 1.  Change to a production-ready database.
 2.  Have this API write to a Kafka topic, and create a separate consumer that reads from the topic
-and stores it in the database (or databases).  One database could be OLTP and another could be for OLAP.
+and stores it in the database (or databases).  One database could be OLTP to serve a Web UI and another could be for 
+OLAP to serve dashboards.
 
 ![v2](docs/img/architecture_v2.png)
